@@ -1,0 +1,105 @@
+@use 'variables' as c;
+@use 'medias' as q;
+
+@mixin btn($color:red,$bg-color:white){
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  color:$color;
+  background-color: $bg-color;
+  cursor: pointer;
+  border-radius: 2.5rem;
+  border: none;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  text-align: center;
+  &:nth-of-type(1){
+    padding-bottom: 15rem;
+  }
+  
+
+  &__img{
+    width: 100%;
+    max-width: 60rem;
+    padding-top: 1rem;
+  }
+  .cols{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    .col{
+      
+      p{
+        color: c.$Very-Grayish;
+        max-width: 60rem;
+        margin-inline: auto;
+      }
+    }
+
+  }
+
+  @include q.lg{
+    display: grid;
+    place-items: center;
+    column-gap: 5rem;
+    grid-template-areas:
+    "imagen parrafo"
+    "imagen parrafo";
+
+    &:nth-of-type(1){
+      padding-bottom: 5rem;
+      grid-template-areas: 
+      "parrafo imagen"
+      "parrafo imagen";
+    }
+    &:nth-of-type(3){
+      padding-top: 5rem;
+    }
+
+    .cols{
+      max-width: 52rem;
+      grid-area: parrafo;
+      text-align: left;
+      gap: 6rem;
+    }
+
+    &__img{
+      grid-area: imagen;
+    }
+  }
+
+  @include q.xl{
+    &__img{
+      max-width: 80rem;
+    }
+  }
+
+  
+  
+}
+
+.subtitle{
+  color: c.$Dark-blue;
+  padding-bottom: 1.5rem;
+  &-m{
+    @extend .subtitle;
+    color:white;
+  }
+}
+
+.cta{
+  @include btn(red,c.$White);
+  font-weight: 700;
+
+  &-m{
+    @extend .cta;
+    font-weight: 300;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
