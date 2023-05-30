@@ -21,10 +21,11 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
+- Sass
 
 ### Screenshot
 
-![Design preview for the Blogr landing page coding challenge](https://www.frontendmentor.io/solutions/blogr-lading-page-st99cnKE6P)
+![Design preview for the Blogr landing page coding challenge](https://github.com/brycezubi/Blog-r-Landing-Page/blob/main/assets/design/desktop-preview.jpg)
 
 ### Links
 
